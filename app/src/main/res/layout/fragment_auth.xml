@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.AuthFragment">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageViewFirst"-->
+<!--        android:layout_width="289.47dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:src="@drawable/logo3x"-->
+<!--        android:text="@string/hello_blank_fragment"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <ImageView
+        android:id="@+id/imageViewFirstTop"
+        android:layout_width="220dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/logo3x"
+        android:text="@string/hello_blank_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Авторизация"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewFirstTop"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFirstTop"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFirstTop" />
+
+    <TextView
+        android:id="@+id/about_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:maxLines="3"
+        android:paddingLeft="20sp"
+
+        android:paddingRight="20sp"
+        android:text="Для продолжения покупки пожалуйста авторизуйтесь через номер телефона"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/some_id"
+        app:layout_constraintStart_toStartOf="@+id/some_id"
+        app:layout_constraintTop_toBottomOf="@+id/some_id" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#ffffff"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/about_auth"
+        app:strokeColor="#385AA5"
+        app:strokeWidth="2dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:ems="10"
+            android:id="@+id/editHintPhoneNumber"
+            android:inputType="phone"
+            android:gravity="center"
+            android:hint="Номер телефона"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#262C6C"
+            android:textColorHint="#262C6C"
+            android:textSize="18sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#ffffff"
+android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2"
+        app:strokeColor="#385AA5"
+        app:strokeWidth="2dp">
+
+        <EditText
+            android:id="@+id/editPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Смс-код"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="#262C6C"
+            android:textColorHint="#262C6C"
+            android:textSize="18sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <TextView
+        android:id="@+id/textCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Отправить код еще раз"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView3"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btnAuth"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/rounded_login"
+        android:gravity="center"
+        android:text="Получить смс-код"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/materialCardView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView3"
+
+        app:layout_constraintTop_toBottomOf="@+id/textCode" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

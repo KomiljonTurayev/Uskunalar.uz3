@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="uz.uskunalar.uz.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+  <fragment
+        android:id="@+id/nav_auth"
+        android:name="uz.uskunalar.uz.ui.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="uz.uskunalar.uz.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_category"
+        android:name="uz.uskunalar.uz.ui.category.mainCategory.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" />
+    <fragment
+        android:id="@+id/nav_favourite"
+        android:name="uz.uskunalar.uz.ui.favourite.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/nav_category_back"
+        android:name="uz.uskunalar.uz.ui.category.subcategory.CategoryBackFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_category_back" />
+  <fragment
+      android:id="@+id/nav_sub_category"
+      android:name="uz.uskunalar.uz.ui.category.subcategory.subsubcategory.SubCategoryFragment"
+      android:label="fragment_sub_category"
+      tools:layout="@layout/fragment_sub_category" />
+  <fragment
+      android:id="@+id/testFragment"
+      android:name="uz.uskunalar.uz.ui.TestFragment"
+      android:label="fragment_test"
+      tools:layout="@layout/fragment_test" />
+</navigation>
